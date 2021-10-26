@@ -1,10 +1,9 @@
 # Fabric Starter Gen
 
+
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/0-percent-optimized.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/it-works-why.svg)](https://forthebadge.com)
-[![forthebadge](https://i.ibb.co/JnyzPXD/all-rights-reserved.png)](https://forthebadge.com)
-
 
 This program generates a ***starter fabric mod*** for you to start modding your mod *right away*!
 
@@ -13,4 +12,5 @@ This program generates a ***starter fabric mod*** for you to start modding your 
 
  
 ## License
+[![forthebadge](https://i.ibb.co/JnyzPXD/all-rights-reserved.png)](https://forthebadge.com)
 This program is 'All rights reserved'. You can use it personally (personal use is allowed) but you are not allowed to distribute, sell, and/or modify it (commercial use is not allowed)
