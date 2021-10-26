@@ -13,3 +13,6 @@ This program generates a ***starter fabric mod*** for you to start modding your 
 - randomly messes up the renaming process
 
  Solutions are underway for all the issues cited above.
+ 
+## License
+This program is 'All rights reserved'. You can use it personally (personal use is allowed) but you are not allowed to distribute, sell and/or modify it (commercial use is not allowed)
