@@ -15,3 +15,11 @@ This program generates a ***starter fabric mod*** for you to start modding your 
 [![forthebadge](https://i.ibb.co/JnyzPXD/all-rights-reserved.png)](https://forthebadge.com)
 
 **This program is 'All rights reserved'. You can use it personally (*personal use is allowed*) but you are not allowed to distribute, sell, and/or modify it (*commercial use is not allowed*)**
+
+```
+/* Copyright (C) Just_a_Mango - *All Rights Reserved*
+ * Unauthorized copying, distributing, and/or modification of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * Written by Just_a_Mango <justamango@altmails.com>, October 2021
+ */
+```
