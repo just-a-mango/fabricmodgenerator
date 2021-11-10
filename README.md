@@ -1,25 +1,34 @@
-# Fabric Starter Gen
+<h1 align="center">Welcome to FabricStarterGen 👋</h1>
+<p>
+  <a href="#" target="_blank">
+    <img alt="License: Personal Use Allowed" src="https://img.shields.io/badge/License-Personal Use Allowed-yellow.svg" />
+  </a>
+</p>
 
+> This program generates a starter fabric mod for you to start modding right away!
 
-[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/0-percent-optimized.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/it-works-why.svg)](https://forthebadge.com)
+### 🏠 [Homepage](https://github.com/Just-A-Mango/fabricstartergen)
 
-This program generates a ***starter fabric mod*** for you to start modding your mod *right away*!
+## Usage
 
-## Known issues
-- sometimes messes up the renaming process, may be due to the mod name
-
- 
-## License
-[![forthebadge](https://i.ibb.co/JnyzPXD/all-rights-reserved.png)](https://forthebadge.com)
-
-**This program is 'All rights reserved'. You can use it personally (*personal use is allowed*) but you are not allowed to distribute, sell, and/or modify it (*commercial use is not allowed*)**
-
+```sh
+python fabricstartergen.py
 ```
-/* Copyright (C) Just_a_Mango - *All Rights Reserved*
- * Unauthorized copying, distributing, and/or modification of this file, via any medium is strictly prohibited
- * Proprietary and confidential
- * Written by Just_a_Mango <justamango@altmails.com>, October 2021
- */
-```
+
+## Author
+
+👤 **Just_a_Mango**
+
+* Website: https://just-a-mango.github.io/me/
+* Github: [@Just-A-Mango](https://github.com/Just-A-Mango)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Just-A-Mango/fabricstartergen/issues). 
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
