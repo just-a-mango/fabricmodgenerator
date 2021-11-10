@@ -55,9 +55,7 @@ except:
     error("Failed to open gradle.properties. Please check if the file exists and try again.")
 try:
     filedata = filedata.replace('maven_group = com.example', 'maven_group = ' + maven_group)
-    filedata = filedata.replace('archives_base_name = fabric-example-mod', 'archives_base_name = ' + mod_name.lower())
-    filedata = filedata.replace('1.17.1+build.63', '1.17.1+build.63:v2')
-    filedata = filedata.replace('0.11.7', '0.12.3')
+    filedata = filedata.replace('fabric-example-mod', mod_name.lower())
     filedata = filedata.replace('1.0.0', mod_version.lower())
 except:
     error("Failed to rename references in gradle.properties. Please check the file and try again.")
