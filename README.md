@@ -5,7 +5,7 @@
   </a>
 </p>
 
-> This program generates a starter fabric mod for you to start modding right away!
+### This program generates a starter fabric mod for you to start modding right away!
 
 ### 🏠 [Homepage](https://github.com/Just-A-Mango/fabricstartergen#readme)
 
