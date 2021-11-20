@@ -1,6 +1,5 @@
-#Import everything (+define the color class)
-import os
-import shutil
+#Import everything (and define the color class)
+import os, shutil
 from datetime import date
 from git import Repo
 class color:
@@ -17,16 +16,20 @@ class color:
 
 
 #Print title
-print(color.GREEN + color.BOLD + "--         FABRIC STARTER GEN         --" + color.END + "       By Just_a_Mango")
+print(color.GREEN + color.BOLD + '|-----------------------------|\r\n|     Fabric Starter Gen      |    by Just_a_Mango\r\n|-----------------------------|\r\n' + color.END)
+
+
+#If there is an error, print it 
 def error(error):
     print(color.RED + "[ERROR] - " + error + color.END)
     exit()
 
 
 #Ask questions
-mod_name = input(color.BLUE + "Please enter your mod's name(ex. MyMod): ")
-maven_group = input("Please enter your maven group(ex. com.mango): ")
-mod_version = input("Please input your mod's first version(ex. 1.0.0): ")
+mc_version = input(color.BLUE + "Please enter your desired Minecraft version(the only supported options are 1.16, 1.17, and 1.18 and if none is chosen 1.17 will be chosen): ").replace(" ","")
+mod_name = input("Please enter your mod's name(ex. MyMod): ").replace(" ","")
+maven_group = input("Please enter your maven group(ex. com.mango): ").replace(" ","")
+mod_version = input("Please input your mod's first version(ex. 1.0.0): ").replace(" ","")
 mod_description = input("Please enter your mod's description: ")
 mod_license = input("Please enter your mod's license(ex. MIT): ")
 mod_creator = input("Please enter your name(as an author): ")
@@ -42,7 +45,14 @@ try:
 except:
     error("Failed to create the directory for your mod. Please check your mod's name and try again.")
 try:
-    Repo.clone_from('https://github.com/FabricMC/fabric-example-mod', path)
+    if mc_version == '1.16':
+        Repo.clone_from('https://github.com/FabricMC/fabric-example-mod', path, branch='master')
+    elif mc_version == '1.18':
+        Repo.clone_from('https://github.com/FabricMC/fabric-example-mod', path, branch='1.18')
+    else:
+        Repo.clone_from('https://github.com/FabricMC/fabric-example-mod', path, branch='1.17')
+        
+        
 except:
     error("Failed to download the repository from github. If the repository isn't accessible anymore, please check for updates of this project on Github and/or create an issue.")
 
