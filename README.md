@@ -1,9 +1,5 @@
 <h1 align="center">Welcome to FabricStarterGen 👋</h1>
-<p>
-  <a href="#" target="_blank">
-    <img alt="License: Personal Use Allowed" src="https://img.shields.io/badge/License-Personal Use Allowed-yellow.svg" />
-  </a>
-</p>
+
 
 ### This program generates a starter fabric mod for you to start modding right away!
 
