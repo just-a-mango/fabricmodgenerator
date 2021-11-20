@@ -1,7 +1,6 @@
 #Import everything (and define the color class)
-import os, shutil
+import os, shutil, subprocess
 from datetime import date
-from git import Repo
 class color:
    PURPLE = '\033[95m'
    CYAN = '\033[96m'
@@ -13,7 +12,10 @@ class color:
    BOLD = '\033[1m'
    UNDERLINE = '\033[4m'
    END = '\033[0m'
-
+try:
+    from git import Repo
+except:
+    subprocess.call(["pip", "install", "gitpython"], stdout = open(os.devnull, "w"), stderr = subprocess.STDOUT)
 
 #Print title
 print(color.GREEN + color.BOLD + '|-----------------------------|\r\n|     Fabric Starter Gen      |    by Just_a_Mango\r\n|-----------------------------|\r\n' + color.END)
