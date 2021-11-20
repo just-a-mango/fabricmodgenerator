@@ -8,11 +8,6 @@
 ## Usage
 
 ```sh
-pip install gitpython
-```
-<p align="center"><b>⬆️ You need gitpython in order to run this program ⬆️</b><br></p>
-
-```sh
 python fabricstartergen.py
 ```
 
