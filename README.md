@@ -11,7 +11,7 @@
 python fabricstartergen.py
 ```
 
-<p align="center"><b>⚠️ This program currently only works for the 1.17.1 version of Minecraft ⚠️</b><br></p>
+<p align="center"><b>ℹ️ This program works for the 1.16.5, 1.17.1, and 1.18 versions of Minecraft ℹ️</b><br></p>
 
 ## Author
 
