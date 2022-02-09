@@ -1,6 +1,3 @@
-""" 
-FabricStarterGen © 2022 by Just_a_Mango is licensed under Attribution-NonCommercial-NoDerivatives 4.0 International 
-"""
 #Import everything (and define the color class)
 import os, shutil, subprocess
 from datetime import date
