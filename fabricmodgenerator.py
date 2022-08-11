@@ -33,6 +33,7 @@ print(color.GREEN + color.BOLD + '|-----------------------------|\r\n|     Fabri
 #Ask questions
 mc_version = input(color.BLUE + "Please enter your desired Minecraft version(1.16-1.19 -> default:1.19): ").replace(" ","")
 mod_name = input("Please enter your mod's name(ex. MyMod): ").replace(" ","")
+mod_id = input("Please enter your mod's ID(ex. mymod): ").replace(" ","")
 maven_group = input("Please enter your maven group(ex. com.mango): ").replace(" ","")
 mod_version = input("Please input your mod's first version(ex. 1.0.0): ").replace(" ","")
 mod_description = input("Please enter your mod's description: ")
@@ -72,7 +73,7 @@ except:
     error("Failed to open gradle.properties. Please check if the file exists and try again.")
 try:
     filedata = filedata.replace('maven_group = com.example', 'maven_group = ' + maven_group)
-    filedata = filedata.replace('fabric-example-mod', mod_name.lower())
+    filedata = filedata.replace('fabric-example-mod', mod_id)
     filedata = filedata.replace('1.0.0', mod_version.lower())
 except:
     error("Failed to rename references in gradle.properties. Please check the file and try again.")
@@ -89,7 +90,7 @@ try:
     renamed_path = path+'//src//main//java//'+maven_group_split[0]
     os.rename(path+'//src//main//java//net', renamed_path)
     os.rename(renamed_path+'//fabricmc', renamed_path+'//'+maven_group_split[1])
-    os.rename(renamed_path+'//'+maven_group_split[1]+'//example', renamed_path+'//'+maven_group_split[1]+'//'+mod_name.lower())
+    os.rename(renamed_path+'//'+maven_group_split[1]+'//example', renamed_path+'//'+maven_group_split[1]+'//'+mod_id)
 except:
     error("Failed to rename package src/main/java/*yourmavengroup*/*yourmodname*. Please check if the package src/main/java/net/fabricmc/example exists and try again.")
 
@@ -101,8 +102,8 @@ try:
 except:
     error("Failed to open the main class ExampleMod.java. Please check if it exists and if its name is no longer ExampleMod.java, please create an issue on the Github of this project.")
 try:
-    filedata = filedata.replace('package net.fabricmc.example;', 'package '+maven_group+'.'+mod_name.lower()+';')
-    filedata = filedata.replace('modid', mod_name.lower())
+    filedata = filedata.replace('package net.fabricmc.example;', 'package '+maven_group+'.'+mod_id+';')
+    filedata = filedata.replace('modid', mod_id)
     filedata = filedata.replace('ExampleMod', mod_name)
 except:
     error("Failed to rename references in the main class ExampleMod.java. Please check the names of the packages and create an issue on the Github of this project.")
@@ -124,8 +125,8 @@ try:
 except:
     error("Failed to open the default mixin class ExampleMixin.java. Please check if it exists and try again.")
 try:
-    filedata = filedata.replace('package net.fabricmc.example.mixin;', 'package '+maven_group+'.'+mod_name.lower()+'.mixin;')
-    filedata = filedata.replace('net.fabricmc.example.ExampleMod', maven_group+'.'+mod_name.lower()+"."+mod_name)
+    filedata = filedata.replace('package net.fabricmc.example.mixin;', 'package '+maven_group+'.'+mod_id+'.mixin;')
+    filedata = filedata.replace('net.fabricmc.example.ExampleMod', maven_group+'.'+mod_id+"."+mod_name)
     filedata = filedata.replace('ExampleMod', mod_name)
 except:
     error("Failed to rename references in the default mixin class ExampleMixin.java. Please create an issue on the Github of this project")
@@ -143,11 +144,11 @@ try:
 except:
     error("Failed to open fabric.mod.json. Please check if it exists and try again")
 try:
-    filedata = filedata.replace('modid', mod_name.lower())
+    filedata = filedata.replace('modid', mod_id)
     filedata = filedata.replace('Example Mod', mod_name)
     filedata = filedata.replace('This is an example description! Tell everyone what your mod is about!', mod_description)
     filedata = filedata.replace('Me!', mod_creator)
-    filedata = filedata.replace('net.fabricmc.example.ExampleMod', maven_group+'.'+mod_name.lower()+'.'+mod_name)
+    filedata = filedata.replace('net.fabricmc.example.ExampleMod', maven_group+'.'+mod_id+'.'+mod_name)
     filedata = filedata.replace('CC0-1.0', mod_creator)
     filedata = filedata.replace('https://fabricmc.net/', mod_homepage)
     filedata = filedata.replace('https://github.com/FabricMC/fabric-example-mod', mod_source)
@@ -167,7 +168,7 @@ try:
 except:
     error("Failed to open modid.mixins.json Please check if it exists and try again")
 try:
-    filedata = filedata.replace('net.fabricmc.example.mixin', maven_group+"."+mod_name.lower()+".mixin")
+    filedata = filedata.replace('net.fabricmc.example.mixin', maven_group+"."+mod_id+".mixin")
 except:
     error("Failed to rename references in modid.mixins.json. Please create an issue on the Github of this project")
 try:
@@ -179,11 +180,11 @@ except:
 
 #Rename 'modid' to the user's chosen modid
 try:
-    os.rename(path+'//src//main//resources//modid.mixins.json', path+'//src//main//resources//'+mod_name.lower()+'.mixins.json')
+    os.rename(path+'//src//main//resources//modid.mixins.json', path+'//src//main//resources//'+mod_id+'.mixins.json')
 except:
     error("Failed to rename modid.mixins.json to *yourmodname*.mixins.json. Please check your mod's name and try again.")
 try:
-    os.rename(path+'//src//main//resources//assets//modid', path+'//src//main//resources//assets//'+mod_name.lower())
+    os.rename(path+'//src//main//resources//assets//modid', path+'//src//main//resources//assets//'+mod_id)
 except:
     error("Failed to rename the folder modid to your mod's name. Please check your mod's name and the 'modid' directory and try again.")
 
